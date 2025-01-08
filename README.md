@@ -1,0 +1,1 @@
+Calculating and charting the number of cobinations of words adding to N total characters. 
