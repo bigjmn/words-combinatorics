@@ -5,9 +5,9 @@ from calculate_combos import word_dist, chars_to_combos
 
 WORDLIST_PATH = "wordlist.txt"
 WORDBLOCKS = 3 
-PLOT_RANGE = [5,30]
+PLOT_RANGE = [5,40]
 
-LOG_SCALE = True 
+LOG_SCALE = False 
 
 def main():
     vectorized_combos = np.vectorize(lambda x: chars_to_combos(x, wordlengths_arr, WORDBLOCKS))
@@ -17,6 +17,7 @@ def main():
     x_axis = np.linspace(x_min, x_max, (x_max-x_min), dtype=int)
 
     w_heights = vectorized_combos(x_axis)
+    print(w_heights)
     loglabel = ""
     fig, ax = plt.subplots()
     
