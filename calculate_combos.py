@@ -1,7 +1,3 @@
-import numpy as np 
-import matplotlib.pyplot as plt
-
-
 def word_dist(wordlist_file) -> list[int]:
     with open(wordlist_file, "r") as f: 
         wlist = f.read().splitlines()
